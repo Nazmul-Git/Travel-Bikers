@@ -7,7 +7,7 @@ const Category = () => {
     const yourPlaces=useLoaderData();
     console.log(yourPlaces);
     return (
-        <div>
+        <div className='m-40 mt-0'>
             {
                 yourPlaces.map(place=><PlaceCard key={place.id} place={place}></PlaceCard>)
             }

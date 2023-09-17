@@ -11,11 +11,11 @@ const LeftNav = () => {
         .then(data=>setCategories(data))
     },[])
     return (
-        <div>
+        <div className=' fixed'>
             {
-                categories.map(category=><p key={category.id} >
-                    <Link to={`/categories/${category.id}`}>{category.categoryName}</Link>
-                </p>)
+                categories.map(category=><div className='text-2xl font-bold m-2 p-2' key={category.id} >
+                    <Link to={`/categories/${category.id}`} >{category.categoryName}</Link>
+                </div>)
             }
         </div>
     );

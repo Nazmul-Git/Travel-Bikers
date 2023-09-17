@@ -12,19 +12,18 @@ const Main = () => {
         <div className='m-48'>
             <Header></Header>
             <NavBar></NavBar>
-            <Container >
+            <Container>
                 <Row>
-                    <Col lg={3}>
+                    <Col sm={4}>
                         <LeftNav></LeftNav>
                     </Col>
-
-                    <Col lg={9}>
+                    <Col sm={8}>
                         <Outlet></Outlet>
-                    </Col>   
+                    </Col>
                 </Row>
             </Container>
             <Footer></Footer>
-            
+
         </div>
     );
 };
