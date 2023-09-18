@@ -4,9 +4,9 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Place = () => {
-    const prms = useLoaderData();
-    console.log(prms);
-    const { details, placeName, title, date, id } = prms;
+    const paramsObj = useLoaderData();
+    console.log(paramsObj);
+    const { details, placeName, title, date, id } = paramsObj;
 
     return (
         <div className='ml-48 mt-48'>

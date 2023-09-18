@@ -6,12 +6,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../Shared/LeftNav';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Shared/Footer';
+import HeaderNav from '../Shared/HeaderNav';
 
 const PlaceLayout = () => {
     return (
-        <div className='m-48'>
-            <Header></Header>
-            <NavBar></NavBar>
+        <div className='ml-48 mr-48 shadow-xl shadow-slate-300'>
+            <HeaderNav></HeaderNav>
             <Container>
                 <Row>
                     <Col lg={3}>

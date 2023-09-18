@@ -5,10 +5,13 @@ import LeftNav from '../Shared/LeftNav';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 import HeaderNav from '../Shared/HeaderNav';
+import MarqueeItem from '../Design/MarqueeItem';
+
+
 
 const Main = () => {
     return (
-        <div className='m-48'>
+        <div className='ml-48 mr-48 shadow-xl shadow-slate-300'>
             <HeaderNav></HeaderNav>
             <Container>
                 <Row>
@@ -20,6 +23,7 @@ const Main = () => {
                     </Col>
                 </Row>
             </Container>
+            <MarqueeItem></MarqueeItem>
             <Footer></Footer>
 
         </div>
