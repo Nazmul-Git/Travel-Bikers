@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
+import { Form } from 'react-bootstrap';
 
 const Register = () => {
     const [error, setError]=useState('');
@@ -57,7 +58,7 @@ const Register = () => {
                         <h1 className="text-5xl font-bold">Register now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div onSubmit={handleSubmit} className="card-body">
+                        <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Username</span>
@@ -75,6 +76,7 @@ const Register = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name='password' required placeholder="password" className="input input-bordered" />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Confirm Password</span>
@@ -87,11 +89,10 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Submit</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
