@@ -1,13 +1,23 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { createContext } from 'react';
-
+import React, { createContext, useState } from 'react';
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import app from '../Firebase/firebase.config';
 
 export const AuthContext=createContext(null);
+
+const auth=getAuth(app);
 const AuthProvider = ({children}) => {
+    const [user, setUser]=useState(null);
+
+    const createUser=(email, pass)=>{
+        return createUserWithEmailAndPassword(auth, email, pass);
+    }
 
 
     const authInfo={
+        user,
+        createUser,
 
     }
     return (

@@ -4,7 +4,7 @@ import moment from 'moment/moment';
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
 import { FcBookmark, FcShare } from "react-icons/fc";
-import { FaRegStar, FaStar, FaEye } from "react-icons/fa";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
@@ -17,11 +17,11 @@ const PlaceCard = ({ place }) => {
                 <figure><img className='p-3 h-72 w-96 ' src={imageUrl} alt="Movie" /></figure>
             </div>
             <div className="card-body ">
-                <h2 className="card-title">{placeName}</h2>
+                <h2 className="card-title font-bold">{placeName}</h2>
                 <p>{title}</p>
                 <p><small>{moment(date).format('yyyy-MM-D')}</small></p>
                 <div className="card-actions  flex justify-between">
-                    {/* <p>{Rating}</p>                 */}
+                
                     <div className='flex gap-4'>
                         <Rating
                          placeholderRating={rating}

@@ -14,6 +14,8 @@ import AuthProvider from './Provider/authProvider';
 import Category from './Pages/Category';
 import PlaceLayout from './Layout/PlaceLayout';
 import Place from './Pages/Place';
+import Home from './Pages/About';
+import Blog from './Pages/Blog';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
         loader:({params})=>fetch(`http://localhost:3000/place/${params.id}`)
       }
     ]
+  },
+  {
+    path:'/about',
+    element:<Home></Home>
+  },
+  {
+    path:'/blog',
+    element:<Blog></Blog>
   }
 ]);
 
