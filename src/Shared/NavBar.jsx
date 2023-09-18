@@ -2,11 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { RiMotorbikeFill } from "react-icons/Ri";
-import MarqueeItem from '../Design/MarqueeItem';
 
 const NavBar = () => {
     return (
-        <div className='sticky top-56 z-50'>
+        <div className=''>
             <div className="flex justify-around items-center rounded-lg mt-8 text-4xl font-sans font-bold shadow-xl shadow-orange-300 p-3 ">
                 <Link className="text-xl"><RiMotorbikeFill className='h-20 w-20 text-blue-700'></RiMotorbikeFill></Link>
                 <div className='flex gap-16'>
@@ -20,7 +19,7 @@ const NavBar = () => {
                     }
                 </div>
             </div>
-            <MarqueeItem></MarqueeItem>
+            
         </div>
 
     );

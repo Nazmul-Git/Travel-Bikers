@@ -11,8 +11,8 @@ import { Link } from 'react-router-dom';
 const PlaceCard = ({ place }) => {
     const { title, placeName, imageUrl, Rating, date, id } = place;
     return (
-        <div className="card card-side bg-base-100 shadow-xl m-6 flex justify-between gap-20 relative">
-            <div>
+        <div className="card card-side bg-base-100 shadow-xl m-6 flex justify-between gap-20 ">             
+            <div className=''>
                 <figure><img className='p-3 h-72 w-96 ' src={imageUrl} alt="Movie" /></figure>
             </div>
             <div className="card-body ">
