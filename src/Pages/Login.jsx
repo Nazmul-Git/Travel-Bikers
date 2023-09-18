@@ -1,10 +1,32 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../Provider/authProvider';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+    const {userLogIn}=useContext(AuthContext);
+    const [error, setError]=useState('');
 
     const handleLogIn=(e)=>{
-        
+        e.preventDefault();
+        const form=e.target;
+        const name=form.name.value;
+        const email=form.email.value;
+        const pass=form.password.value;
+        const confPass=form.confirmPassword.value;
+        console.log(name,email,pass,confPass);
+        userLogIn(email,pass)
+        .then(result=>{
+            const loggedUser=result.user;
+            console.log(loggedUser);
+            setError('');
+            form.reset();
+
+        })
+        .catch(error=>{
+            console.error(error.message);
+            setError(error.message);
+        })
     }
     return (
         <div>
@@ -29,9 +51,17 @@ const Login = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
+                                <label className="label">
+                                    <p className="label-text-alt">{error}</p>
+                                </label>
+                                <label className="label">
+                                    <p className="label-text-alt">Do not have an account ?
+                                       <Link to='/register' className='text-blue-500 font-bold'>Register</Link>
+                                    </p>
+                                </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary"> Login</button>
                             </div>
                         </form>
                     </div>

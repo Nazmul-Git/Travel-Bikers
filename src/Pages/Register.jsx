@@ -2,6 +2,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
 import { Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [error, setError]=useState('');
@@ -44,7 +45,7 @@ const Register = () => {
                 setError('');
                 form.reset();
             })
-            .error(error=>{
+            .catch(error=>{
                 console.log(error.message);
                 setError(error.message);
             })
@@ -84,6 +85,11 @@ const Register = () => {
                                 <input type="password" name='confirmPassword' required placeholder="confirm password" className="input input-bordered" />
                                 <label className="label">
                                     <p className="label-text-alt  text-red-700 font-bold">{error} </p>
+                                </label>
+                                <label className="label">
+                                    <p className="label-text-alt">Already have an account ?     
+                                       <Link to='/login' className='text-blue-500 font-bold'> Login</Link>
+                                    </p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
