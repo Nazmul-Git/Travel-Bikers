@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Place = () => {
     const paramsObj = useLoaderData();
@@ -27,10 +27,15 @@ const Place = () => {
                 </div>
             </div>
 
-            <div className='m-10 '>
-                <h2>{placeName}</h2>
-                <p>{title}</p>
-                <p>{date}</p>
+            <div className='flex justify-between items-center m-10 gap-8'>
+                <div className=' '>
+                    <h2>{placeName}</h2>
+                    <p>{title}</p>
+                    <p>{date}</p>
+                </div>
+                <div>
+                    <Link className="btn btn-success">Booking</Link>
+                </div>
             </div>
 
         </div>

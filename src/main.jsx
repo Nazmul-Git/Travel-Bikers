@@ -14,8 +14,8 @@ import AuthProvider from './Provider/authProvider';
 import Category from './Pages/Category';
 import PlaceLayout from './Layout/PlaceLayout';
 import Place from './Pages/Place';
-import Home from './Pages/About';
-import Blog from './Pages/Blog';
+import AboutLayout from './Layout/AboutLayout';
+import BlogLayout from './Layout/BlogLayout';
 
 const router = createBrowserRouter([
   {
@@ -60,11 +60,11 @@ const router = createBrowserRouter([
   },
   {
     path:'/about',
-    element:<Home></Home>
+    element: <AboutLayout></AboutLayout>
   },
   {
     path:'/blog',
-    element:<Blog></Blog>
+    element:<BlogLayout></BlogLayout>
   }
 ]);
 

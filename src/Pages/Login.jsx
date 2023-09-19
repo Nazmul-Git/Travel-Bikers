@@ -2,6 +2,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
 import { Link } from 'react-router-dom';
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     const { userLogIn, googleSignIn } = useContext(AuthContext);
@@ -34,7 +35,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
             })
-            .catch(error=>{
+            .catch(error => {
                 console.log(error.message);
             })
     }
@@ -76,7 +77,14 @@ const Login = () => {
 
                         </form>
                         <div>
-                            <p className='text-center'>Sign in with <button onClick={handleGoogleSignIn} className='text-green-500'>Google</button> </p>
+                            <p className='text-center p-4'>Sign in with.. 
+                                <button onClick={handleGoogleSignIn} className='text-green-500 '>
+                                    <div className='flex items-center'>
+                                        <span>Google</span>
+                                        <FcGoogle></FcGoogle>
+                                    </div>
+                                </button>
+                            </p>
                         </div>
                     </div>
                 </div>
