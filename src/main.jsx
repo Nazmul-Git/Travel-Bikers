@@ -16,6 +16,8 @@ import PlaceLayout from './Layout/PlaceLayout';
 import Place from './Pages/Place';
 import AboutLayout from './Layout/AboutLayout';
 import BlogLayout from './Layout/BlogLayout';
+import BookingLayout from './Layout/BookingLayout';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -55,8 +57,13 @@ const router = createBrowserRouter([
         path:':id',
         element: <Place></Place>,
         loader:({params})=>fetch(`http://localhost:3000/place/${params.id}`)
-      }
+      },
+      
     ]
+  },
+  {
+    path:'/booking',
+    element:<PrivateRoute><BookingLayout></BookingLayout></PrivateRoute>
   },
   {
     path:'/about',

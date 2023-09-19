@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Header from '../Shared/Header';
-import NavBar from '../Shared/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../Shared/LeftNav';
 import { Outlet } from 'react-router-dom';

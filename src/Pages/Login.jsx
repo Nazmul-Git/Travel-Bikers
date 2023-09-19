@@ -1,12 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     const { userLogIn, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const navigateIt=useNavigate();
+    const location=useLocation();
+    console.log(location);
+    const from=location.state?.from?.pathname || '/category/0';
+    console.log(from);
 
     const handleLogIn = (e) => {
         e.preventDefault();
@@ -21,6 +26,7 @@ const Login = () => {
                 console.log(loggedUser);
                 setError('');
                 form.reset();
+                navigateIt(from, { replace: true });
 
             })
             .catch(error => {

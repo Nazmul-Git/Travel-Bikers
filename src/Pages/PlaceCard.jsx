@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import moment from 'moment/moment';
 import React from 'react';
-import { Card, Image } from 'react-bootstrap';
-import { FcBookmark, FcShare } from "react-icons/fc";
+// import { Card, Image } from 'react-bootstrap';
+// import { FcBookmark, FcShare } from "react-icons/fc";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
