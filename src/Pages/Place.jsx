@@ -34,7 +34,7 @@ const Place = () => {
                     <p>{date}</p>
                 </div>
                 <div>
-                    <Link to='/booking' className="btn btn-success">Booking</Link>
+                    <Link to={`/booking/${id}`} className="btn btn-success">Booking</Link>
                 </div>
             </div>
 

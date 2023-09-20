@@ -17,12 +17,12 @@ const NavBar = () => {
     return (
         <div>
             <div className='text-center font-sans'>
-                <h2 className=' font-extrabold  text-8xl p-2 mt-2'>Travel-Bikers</h2>
-                <small className='text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                <h2 className=' font-extrabold  text-8xl p-2 mt-2 text-red-600 shadow-lg shadow-black '>Travel-Bikers</h2>
+                <small className='text-xl text-green-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
             </div>
-            <div className="flex justify-between items-center rounded-lg mt-2 pl-8 pr-8 text-3xl font-sans font-bold shadow-xl shadow-orange-300 p-3 ">
+            <div className="flex justify-between items-center text-white  mt-2 pl-8 pr-8 text-3xl font-sans font-bold shadow-xl shadow-orange-300 p-3 ">
                 <img src={logo} className=' h-40 w-40'></img>
-                <div className='flex gap-16 text-blue-600'>
+                <div className='flex gap-16 '>
                     <Link to='/'>Home</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/blog'>Blog</Link>

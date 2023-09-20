@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
     const { userLogIn, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
-    const navigateIt=useNavigate();
+    const navigate=useNavigate();
     const location=useLocation();
     console.log(location);
     const from=location.state?.from?.pathname || '/category/0';
@@ -26,7 +26,7 @@ const Login = () => {
                 console.log(loggedUser);
                 setError('');
                 form.reset();
-                navigateIt(from, { replace: true });
+                navigate(from, { replace: true });
 
             })
             .catch(error => {
