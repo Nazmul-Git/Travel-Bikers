@@ -2,18 +2,22 @@
 import React, { useState } from 'react';
 import bgImage from '../assets/bikers1.jpg';
 
+
 const Booking = () => {
     const [file, setFile] = useState();
+
+    // const bookingId=useLoaderData();
     const handleChange=(e)=>{
         setFile(URL.createObjectURL(e.target.files[0]));
     }
     return (
         <div className="hero min-h-screen bg-base-200  bg-cover" style={{
+            
             backgroundImage: `url(${bgImage})`
         }}>
-            <div className="hero-content flex-col ju lg:flex-row-reverse ml-64 text-white">
+            <div className="hero-content flex-col  lg:flex-row-reverse ml-64 text-white">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold font-serif">Let's ready for our exciting ride !!!</h1>
+                    <h1 className="text-5xl font-bold font-serif">Lets ready for our exciting ride !!!</h1>
                     <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">

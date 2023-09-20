@@ -14,7 +14,7 @@ const LeftNav = () => {
     return (
         <div className=' fixed top-76 rounded-md mb-10 bg-gray-800'>
             {
-                categories.map(category => <div className='text-xl font-bold m-2 p-2 text-green-500' key={category.id} >
+                categories.map(category => <div className='text-xl font-bold m-2 p-2 text-blue-700' key={category.id} >
                     <Link to={`/categories/${category.id}`} >
                         <span className='flex gap-2 items-center'>
                             <FaLocationArrow></FaLocationArrow>

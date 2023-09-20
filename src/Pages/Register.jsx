@@ -2,11 +2,12 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import image from '../assets/biker4.jpg'
 const Register = () => {
     const [error, setError]=useState('');
     const {user,createUser}=useContext(AuthContext);
+    const navigate= useNavigate();
     
 
     const handleSubmit=(e)=>{
@@ -44,6 +45,7 @@ const Register = () => {
                 console.log(signInUser);
                 setError('');
                 form.reset();
+                navigate('/login');
             })
             .catch(error=>{
                 console.log(error.message);
@@ -53,12 +55,14 @@ const Register = () => {
 
     }
     return (
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
+            <div className="hero min-h-screen  bg-cover " style={{
+                backgroundImage: `url(${image})`
+            }}>
+                <div className="hero-content flex-col backdrop-blur-sm">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+                        <h1 className="text-5xl font-bold font-serif text-black">Register now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl backdrop-blur-sm">
                         <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">

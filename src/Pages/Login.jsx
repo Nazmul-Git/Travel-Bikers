@@ -3,15 +3,16 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/authProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
+import image from '../assets/login.jpg'
 
 const Login = () => {
     const { userLogIn, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
-    const navigate=useNavigate();
-    const location=useLocation();
+    const navigate = useNavigate();
+    const location = useLocation();
     console.log(location);
-    const from=location.state?.from?.pathname || '/category/0';
-    console.log(from);
+    const from = location.state?.from?.pathname || '/categories/0';
+    console.log('user path',from);
 
     const handleLogIn = (e) => {
         e.preventDefault();
@@ -40,29 +41,32 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
             })
     }
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col ">
+        <div className='hero min-h-screen  backdrop-blur-sm    text-black'>
+            <div className="hero min-h-screen bg-cover" style={{
+                backgroundImage: `url(${image})`
+            }}>
+                <div className="hero-content flex-col backdrop-blur-sm">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold text-black font-serif">Login now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogIn} className="card-body">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  backdrop-blur-md">
+                        <form onSubmit={handleLogIn} className="card-body text-black ">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text text-black font-bold">Email</span>
                                 </label>
                                 <input type="email" name='email' required placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text text-black font-bold">Password</span>
                                 </label>
                                 <input type="password" name='password' required placeholder="password" className="input input-bordered" />
                                 <label className="label">
@@ -72,18 +76,18 @@ const Login = () => {
                                     <p className="label-text-alt">{error}</p>
                                 </label>
                                 <label className="label">
-                                    <p className="label-text-alt">Do not have an account ?
+                                    <p className="label-text-alt text-black font-bold">Do not have an account ?
                                         <Link to='/register' className='text-blue-500 font-bold'>Register</Link>
                                     </p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary"> Login</button>
+                                <button className="btn btn-success"> Login</button>
                             </div>
 
                         </form>
                         <div>
-                            <p className='text-center p-4'>Sign in with.. 
+                            <p className='text-center p-4 text-black font-bold'>Sign in with..
                                 <button onClick={handleGoogleSignIn} className='text-green-500 '>
                                     <div className='flex items-center'>
                                         <span>Google</span>
@@ -95,7 +99,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </ div>
     );
 };
 

@@ -7,9 +7,9 @@ export default {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        'text': '0 2px 4px rgba(0, 0, 0, 0.3)',
-        'text-lg': '0 4px 8px rgba(0, 0, 0, 0.4)',
+      textShadow: {
+        'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
       },
     },
   },
