@@ -7,9 +7,10 @@ export default {
   ],
   theme: {
     extend: {
-      backdropBlur:{
-        xs: '2px'
-      }
+      boxShadow: {
+        'text': '0 2px 4px rgba(0, 0, 0, 0.3)',
+        'text-lg': '0 4px 8px rgba(0, 0, 0, 0.4)',
+      },
     },
   },
   plugins: [require("daisyui")],

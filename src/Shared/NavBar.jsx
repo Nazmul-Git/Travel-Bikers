@@ -16,8 +16,8 @@ const NavBar = () => {
     }
     return (
         <div>
-            <div className='text-center font-sans'>
-                <h2 className=' font-extrabold  text-8xl p-2 mt-2 text-red-600 shadow-lg shadow-black '>Travel-Bikers</h2>
+            <div className='text-center font-sans '>
+                <h2 className=' font-extrabold  text-8xl p-2 mt-2 text-red-600 '>Travel-Bikers</h2>
                 <small className='text-xl text-green-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
             </div>
             <div className="flex justify-between items-center text-white  mt-2 pl-8 pr-8 text-3xl font-sans font-bold shadow-xl shadow-orange-300 p-3 ">

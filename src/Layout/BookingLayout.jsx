@@ -12,12 +12,13 @@ const BookingLayout = () => {
             <HeaderNav></HeaderNav>
             <Container>
                 <Row>
-                    <Col lg={9}>
-                        <Outlet></Outlet>
-                    </Col>
                     <Col lg={3}>
                         <LeftNav></LeftNav>
                     </Col>
+                    <Col lg={9}>
+                        <Outlet></Outlet>
+                    </Col>
+
                 </Row>
             </Container>
             <Footer></Footer>

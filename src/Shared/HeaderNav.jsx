@@ -6,7 +6,7 @@ import image from '../assets/bikes.jpg'
 
 const HeaderNav = () => {
     return (
-        <div className="sticky top-0 z-50 bg-center bg-no-repeat bg-cover backdrop-blur-[2px]" style={{
+        <div className="sticky top-0 z-50 bg-center bg-no-repeat bg-cover " style={{
             
             backgroundImage:`url(${image})`
             }}>
