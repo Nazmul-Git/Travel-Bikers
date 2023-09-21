@@ -15,7 +15,9 @@ const Booking = () => {
             
             backgroundImage: `url(${bgImage})`
         }}>
+            
             <div className="hero-content flex-col  lg:flex-row-reverse ml-64 text-white">
+                
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold font-serif">Lets ready for our exciting ride !!!</h1>
                     <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
