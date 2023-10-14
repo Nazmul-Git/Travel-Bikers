@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import bgImage from '../assets/bikers1.jpg';
+import { useNavigate } from 'react-router-dom';
 
 
 const Booking = () => {
     const [file, setFile] = useState();
+    const navigate=useNavigate();
 
     // const bookingId=useLoaderData();
     const handleChange=(e)=>{
@@ -33,7 +35,11 @@ const Booking = () => {
             body: JSON.stringify(registerUser)
         })
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+            console.log(data);
+            form.reset();
+            navigate('/bookings');
+        })
     }
 
     return (

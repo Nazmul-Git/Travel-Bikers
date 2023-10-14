@@ -19,7 +19,7 @@ import BlogLayout from './Layout/BlogLayout';
 import BookingLayout from './Layout/BookingLayout';
 import Booking from './Pages/Booking';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import Bookings from './Pages/Bookings';
+import BookedLayout from './Layout/BookedLayout';
 
 
 const router = createBrowserRouter([
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/bookings',
-    element:<Bookings></Bookings>
+    element:<BookedLayout></BookedLayout>
   }
 ]);
 
