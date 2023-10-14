@@ -19,6 +19,7 @@ import BlogLayout from './Layout/BlogLayout';
 import BookingLayout from './Layout/BookingLayout';
 import Booking from './Pages/Booking';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Bookings from './Pages/Bookings';
 
 
 const router = createBrowserRouter([
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
   {
     path:'/blog',
     element:<BlogLayout></BlogLayout>
+  },
+  {
+    path:'/bookings',
+    element:<Bookings></Bookings>
   }
 ]);
 

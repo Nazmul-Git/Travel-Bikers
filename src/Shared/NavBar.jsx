@@ -27,6 +27,7 @@ const NavBar = () => {
                     <Link to='/'>Home</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/blog'>Blog</Link>
+                    <Link to='/bookings'>Bookings</Link>
                 </div>
                 <div className='flex items-center gap-4'>
                     {
